@@ -292,162 +292,817 @@
         <!-- End Mobile Menu -->
 
 
-        <!-- page-title -->
-        <section class="page-title centred pt_110">
-            <div class="auto-container">
-                <div class="content-box">
-                    <h1>About Us</h1>
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index.html">Home</a></li>
-                        <li>-</li>
-                        <li>About Us</li>
+<!-- banner-section -->
+<section class="banner-section banner-style-two p_relative" style="padding: 60px 0; background-color: #1a4b2c;">
+    <div class="outer-container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        
+        <!-- Columna izquierda: Texto -->
+        <div class="content-box" style="flex: 1; min-width: 320px; color: #fff; padding: 20px;">
+            <h2 style="font-size: 36px; line-height: 1.3; font-weight: 700;">
+                Impulsa tu crecimiento con
+
+                <span style="color: #4caf50;">Marketing Digital y Automatización</span>
+            </h2>
+            <p style="margin: 20px 0; font-size: 16px; color: #ddd; max-width: 450px;">
+            En 4to Creativo combinamos creatividad + datos para diseñar campañas escalables, dashboards claros y flujos automatizados que convierten.</p>
+            <div class="btn-box" style="margin-top: 25px; display: flex; gap: 15px;">
+                <a href="index.html" style="background: #4caf50; color: #fff; padding: 12px 24px; border-radius: 30px; font-weight: 600; text-decoration: none;">
+                     Cotiza campaña
+                </a>
+                <a href="index.html" style="background: #fff; color: #000; padding: 12px 24px; border-radius: 30px; font-weight: 600; text-decoration: none;">
+                    Ver servicios
+                </a>
+            </div>
+        </div>
+
+        <!-- Columna derecha: Imagen -->
+        <div class="image-box" style="flex: 1; min-width: 320px; text-align: center;">
+            <img src="assets/images/banner/banner-1.jpg" alt="Team" style="max-width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+</section>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio - Corregido</title>
+  <style>
+    :root{
+      --accent: #00c26e;
+      --overlay: rgba(0,0,0,0.56);
+      --gap: 18px;
+      --radius: 12px;
+    }
+
+    /* --- Contenedor aislado para evitar conflictos con otros CSS --- */
+    .my-portfolio { font-family: Inter, system-ui, Arial, sans-serif; color:#222; }
+
+    .my-portfolio .auto-container{ max-width:1200px; margin:0 auto; padding:28px; }
+
+    .my-portfolio .sec-title{ text-align:center; margin-bottom:10px; }
+    .my-portfolio .sub-title{ color:#888; font-size:13px; display:block; margin-bottom:6px; }
+    .my-portfolio h2{ margin:0; font-size:28px; }
+
+    /* FILTROS */
+    .my-portfolio .filters{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:18px 0 24px; }
+    .my-portfolio .filter-btn{
+      background:#f2f2f2; border-radius:25px; padding:9px 16px; border:0; cursor:pointer;
+      font-weight:600; color:#333; transition:all .15s ease;
+    }
+    .my-portfolio .filter-btn.active{ background:var(--accent); color:#fff; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+
+    /* GRID (3 columnas estables) */
+    .my-portfolio .items-container{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:var(--gap);
+      align-items:start;
+    }
+    @media (max-width: 992px){ .my-portfolio .items-container{ grid-template-columns:repeat(2,1fr); } }
+    @media (max-width: 640px){ .my-portfolio .items-container{ grid-template-columns:repeat(1,1fr); } }
+
+    .my-portfolio .masonry-item{ list-style:none; }
+
+    /* TARJETA */
+    .my-portfolio .portfolio-block{
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:#efefef;
+      display:flex;
+      flex-direction:column;
+      min-height:1px;
+      box-shadow:0 8px 26px rgba(0,0,0,0.06);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .my-portfolio .portfolio-block:focus{ outline: 3px solid rgba(0,194,110,0.15); }
+
+    /* Contenedor de la imagen con relación de aspecto fija */
+    .my-portfolio .image-wrap{
+      width:100%;
+      aspect-ratio: 16 / 10; /* fija la altura relativa — evita saltos */
+      overflow:hidden;
+      background:#ddd;
+    }
+    .my-portfolio .image-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .my-portfolio .portfolio-body{ position:relative; padding:0; }
+
+    /* OVERLAY */
+    .my-portfolio .overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:20px;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--overlay) 55%);
+      color:#fff;
+      opacity:0;
+      transform: translateY(6px);
+      transition: opacity .28s ease, transform .28s ease;
+      pointer-events:none;
+    }
+    /* visible al hover o cuando .show está presente */
+    .my-portfolio .portfolio-block:hover .overlay,
+    .my-portfolio .overlay.show{
+      opacity:1;
+      transform: translateY(0);
+      pointer-events:auto;
+    }
+
+    .my-portfolio .overlay .cat{ font-size:12px; text-transform:uppercase; color:#d0d0d0; margin-bottom:8px; letter-spacing:.6px; }
+    .my-portfolio .overlay h3{ margin:0 0 8px; font-size:18px; line-height:1.18; color:#fff; }
+    .my-portfolio .overlay .link a{ color:var(--accent); font-weight:700; text-decoration:none; }
+    .my-portfolio .portfolio-block:hover{ transform:translateY(-6px); box-shadow:0 18px 36px rgba(0,0,0,0.10); }
+
+    /* ocultar por filtro */
+    .my-portfolio .masonry-item.hide{
+      display:none; /* simple y mantiene grid ordenado sin huecos */
+    }
+
+    /* PAGINACIÓN simple */
+    .my-portfolio .pagination{ text-align:center; margin-top:20px; }
+    .my-portfolio .pagination a{ display:inline-block; padding:8px 12px; margin:0 6px; background:#f3f3f3; border-radius:8px; text-decoration:none; color:#333; }
+    .my-portfolio .pagination a.current{ background:var(--accent); color:#fff; font-weight:700; }
+
+    /* Mensaje si intentas usar con CSS externo: si ves problemas, coloca este bloque al final del CSS para "ganar" prioridad */
+  </style>
+</head>
+<body>
+  <div class="my-portfolio">
+    <div class="auto-container">
+      <div class="sec-title">
+        <span class="sub-title">Categorías de Servicios</span>
+        <h2>Lo que hacemos por tu marca</h2>
+      </div>
+
+      <!-- filtros -->
+      <div class="filters" role="tablist" aria-label="Filtros portfolio">
+        <button class="filter-btn active" data-filter=".all" aria-pressed="true">View All</button>
+        <button class="filter-btn" data-filter=".consulting" aria-pressed="false">Consulting</button>
+        <button class="filter-btn" data-filter=".market" aria-pressed="false">Market</button>
+        <button class="filter-btn" data-filter=".presentation" aria-pressed="false">Presentation</button>
+        <button class="filter-btn" data-filter=".recruitment" aria-pressed="false">Recruitment</button>
+        <button class="filter-btn" data-filter=".technology" aria-pressed="false">Technology</button>
+      </div>
+
+      <!-- grid -->
+      <div class="items-container" id="items-container">
+        <!-- Nota: el orden en el DOM = orden visual. Mantén aquí el orden que quieras mostrar. -->
+        <div class="masonry-item all consulting">
+          <article class="portfolio-block" tabindex="0">
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-16.jpg" alt="Consulting Excellence"></div>
+            <div class="portfolio-body">
+              <div class="overlay">
+                <div class="cat">IA & Automatización</div>
+                <h3><a href="portfolio.html" style="color:inherit; text-decoration:none;">Chatbots, WhatsApp y CRM inteligentes que trabajan por ti 24/7.</a></h3>
+                <div class="link"><a href="portfolio.html">Learn More</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="masonry-item all market recruitment">
+          <article class="portfolio-block" tabindex="0">
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-17.jpg" alt="Create blog posts"></div>
+            <div class="portfolio-body">
+              <div class="overlay">
+                <div class="cat">Marketing Digital & Activación</div>
+                <h3><a href="portfolio.html" style="color:inherit; text-decoration:none;">Social media, SEO/SEM y campañas creativas que generan clientes reales.</a></h3>
+                <div class="link"><a href="portfolio.html">Learn More</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="masonry-item all consulting presentation">
+          <article class="portfolio-block" tabindex="0">
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-18.jpg" alt="Explore the concept"></div>
+            <div class="portfolio-body">
+              <div class="overlay">
+                <div class="cat">Data-Driven Marketing</div>
+                <h3><a href="portfolio.html" style="color:inherit; text-decoration:none;">Convierte datos en decisiones con analítica avanzada y dashboards claros.</a></h3>
+                <div class="link"><a href="portfolio.html">Learn More</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="masonry-item all recruitment market">
+          <article class="portfolio-block" tabindex="0">
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-19.jpg" alt="Share stories"></div>
+            <div class="portfolio-body">
+              <div class="overlay">
+                <div class="cat">Masificación & Automatización</div>
+                <h3><a href="portfolio.html" style="color:inherit; text-decoration:none;">Activa campañas omnicanal en WhatsApp, email y remarketing a escala.</a></h3>
+                <div class="link"><a href="portfolio.html">Learn More</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="masonry-item all presentation">
+          <article class="portfolio-block" tabindex="0">
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-20.jpg" alt="Provide guidance"></div>
+            <div class="portfolio-body">
+              <div class="overlay">
+                <div class="cat">Software & Dashboards</div>
+                <h3><a href="portfolio.html" style="color:inherit; text-decoration:none;">Desarrollo a medida con integraciones, paneles interactivos y soluciones escalables.</a></h3>
+                <div class="link"><a href="portfolio.html">Learn More</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+         <div class="masonry-item all presentation">
+          <article class="portfolio-block" tabindex="0">
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-21.jpg" alt="Provide guidance"></div>
+            <div class="portfolio-body">
+              <div class="overlay">
+                <div class="cat">Software & Dashboards</div>
+                <h3><a href="portfolio.html" style="color:inherit; text-decoration:none;">Desarrollo a medida con integraciones, paneles interactivos y soluciones escalables.</a></h3>
+                <div class="link"><a href="portfolio.html">Learn More</a></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+      </div> <!-- items-container -->
+
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#" class="current">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+    </div> <!-- auto-container -->
+  </div> <!-- my-portfolio -->
+
+  <script>
+    (function(){
+      const filterBtns = document.querySelectorAll('.my-portfolio .filter-btn');
+      const items = document.querySelectorAll('.my-portfolio .masonry-item');
+
+      filterBtns.forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const filter = btn.getAttribute('data-filter'); // ".consulting" or ".all"
+          filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+          btn.classList.add('active'); btn.setAttribute('aria-pressed','true');
+
+          if(filter === '.all'){
+            items.forEach(it => it.classList.remove('hide'));
+          } else {
+            const cls = filter.replace('.','');
+            items.forEach(it => it.classList.toggle('hide', !it.classList.contains(cls)));
+          }
+        });
+      });
+
+      // overlay: toggle on click/tap, hover handled by CSS
+      document.addEventListener('click', function(e){
+        // ignore clicks on links
+        if (e.target.closest('a')) return;
+
+        const block = e.target.closest('.my-portfolio .portfolio-block');
+        if(block){
+          // toggle only on small screens OR when explicitly clicked (mobile prefer tap)
+          const overlay = block.querySelector('.overlay');
+          // close others
+          document.querySelectorAll('.my-portfolio .overlay.show').forEach(o => { if(o !== overlay) o.classList.remove('show'); });
+          overlay.classList.toggle('show');
+        } else {
+          // click outside: close all overlays
+          document.querySelectorAll('.my-portfolio .overlay.show').forEach(o => o.classList.remove('show'));
+        }
+      });
+
+      // close overlays with ESC
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape') document.querySelectorAll('.my-portfolio .overlay.show').forEach(o=>o.classList.remove('show'));
+      });
+
+      // helpful: console log missing images
+      document.querySelectorAll('.my-portfolio img').forEach(img=>{
+        img.addEventListener('error', ()=> console.warn('Imagen no encontrada:', img.src));
+      });
+    })();
+  </script>
+</body>
+</html>
+<!-- pricing-section -->
+<section class="pricing-section pt_120 pb_90">
+  <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-2.png);"></div>
+  <div class="auto-container">
+    <div class="sec-title centred pb_60 sec-title-animation animation-style2">
+      <span class="sub-title mb_10 title-animation">Pricing</span>
+      <h2 class="title-animation">Elige el plan que mejor se adapta a tu marca</h2>
+    </div>
+
+    <div class="tabs-box">
+      <!-- Botones -->
+      <ul class="tab-btns tab-buttons">
+        <li class="tab-btn active-btn" data-tab="#tab-1">Monthly</li>
+        <li class="tab-btn" data-tab="#tab-2">Yearly</li>
+      </ul>
+
+      <div class="tabs-content">
+        <!-- Tab 1: Monthly -->
+        <div class="tab active-tab" id="tab-1">
+          <div class="row clearfix">
+            <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+              <div class="pricing-block-one">
+                <div class="pricing-table">
+                  <div class="table-header">
+                    <h3>Starter plan</h3>
+                    <h2></h2>
+                    <span>Per Month</span>
+                  </div>
+                  <div class="table-content mb_40">
+                    <p>For new comer to the industry trying out for an unlimited period.</p>
+                    <ul class="list-item">
+                      <li><i class="icon-26"></i>Estrategia de Social Media</li>
+                      <li><i class="icon-26"></i>Soporte y reportes</li>
                     </ul>
+                  </div>
+                  <div class="table-footer">
+                    <a href="#">👉 Cotizar plan</a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-        <!-- page-title end -->
 
+            <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+              <div class="pricing-block-one">
+                <div class="pricing-table">
+                  <div class="table-header">
+                    <h3>Business</h3>
+                    <h2></h2>
+                    <span>Per Month</span>
+                  </div>
+                  <div class="table-content mb_40">
+                    <p>For new comer to the industry trying out for an unlimited period.</p>
+                    <ul class="list-item">
+                      <li><i class="icon-26"></i>Estrategia de Social Media</li>
+                      <li><i class="icon-26"></i>Campañas pagadas (Meta/Google)</li>
+                      <li><i class="icon-26"></i>Automatización WhatsApp/Email</li>
+                      <li><i class="icon-27"></i>Dashboard con métricas clave</li>
+                      <li><i class="icon-27"></i>SEO/SEM</li>
+                      <li><i class="icon-27"></i>Soporte y reportes</li>
+                    </ul>
+                  </div>
+                  <div class="table-footer">
+                    <a href="#">👉 Cotizar plan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <!-- about-style-four -->
-        <section class="about-style-four pt_120 pb_120">
+            <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+              <div class="pricing-block-one">
+                <div class="pricing-table">
+                  <div class="table-header">
+                    <h3>Advanced</h3>
+                    <h2></h2>
+                    <span>Per Month</span>
+                  </div>
+                  <div class="table-content mb_40">
+                    <p>For new comer to the industry trying out for an unlimited period.</p>
+                    <ul class="list-item">
+                      <li><i class="icon-26"></i>Estrategia de Social Media</li>
+                      <li><i class="icon-26"></i>Campañas pagadas (Meta/Google)</li>
+                      <li><i class="icon-26"></i>Automatización WhatsApp/Email</li>
+                      <li><i class="icon-27"></i>Dashboard con métricas clave(Avanzado con analítica)</li>
+                      <li><i class="icon-27"></i>SEO/SEM (Optimización continua)</li>
+                      <li><i class="icon-27"></i>Soporte y reportes</li>
+                      <li><i class="icon-27"></i>Casos de éxito aplicados</li>
+                    </ul>
+                  </div>
+                  <div class="table-footer">
+                    <a href="#">👉 Cotizar plan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Yearly -->
+        <div class="tab" id="tab-2">
+          <div class="row clearfix">
+            <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+              <div class="pricing-block-one">
+                <div class="pricing-table">
+                  <div class="table-header">
+                    <h3>Starter plan</h3>
+                    <h2>$119.00</h2>
+                    <span>Per Year</span>
+                  </div>
+                  <div class="table-content mb_40">
+                    <p>For new comer to the industry trying out for an unlimited period.</p>
+                    <ul class="list-item">
+                      <li><i class="icon-26"></i>Estrategia de Social Media</li>
+                      <li><i class="icon-26"></i>Soporte y reportes</li>
+                    </ul>
+                  </div>
+                  <div class="table-footer">
+                    <a href="#">👉 Cotizar plan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+              <div class="pricing-block-one">
+                <div class="pricing-table">
+                  <div class="table-header">
+                    <h3>Basic plan</h3>
+                    <h2>$239.00</h2>
+                    <span>Per Year</span>
+                  </div>
+                  <div class="table-content mb_40">
+                    <p>For new comer to the industry trying out for an unlimited period.</p>
+                    <ul class="list-item">
+                      <li><i class="icon-26"></i>Advantage on the list</li>
+                      <li><i class="icon-26"></i>Live Tutorial</li>
+                      <li><i class="icon-26"></i>Expert Advice Plan</li>
+                      <li><i class="icon-27"></i>Weekly Workshop</li>
+                      <li><i class="icon-27"></i>Auto Apply to new Job</li>
+                    </ul>
+                  </div>
+                  <div class="table-footer">
+                    <a href="#">Cotizar plan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+              <div class="pricing-block-one">
+                <div class="pricing-table">
+                  <div class="table-header">
+                    <h3>Advanced plan</h3>
+                    <h2>$359.00</h2>
+                    <span>Per Year</span>
+                  </div>
+                  <div class="table-content mb_40">
+                    <p>For new comer to the industry trying out for an unlimited period.</p>
+                    <ul class="list-item">
+                      <li><i class="icon-26"></i>Advantage on the list</li>
+                      <li><i class="icon-26"></i>Live Tutorial</li>
+                      <li><i class="icon-26"></i>Expert Advice Plan</li>
+                      <li><i class="icon-27"></i>Weekly Workshop</li>
+                      <li><i class="icon-27"></i>Auto Apply to new Job</li>
+                    </ul>
+                  </div>
+                  <div class="table-footer">
+                    <a href="#">👉 Cotizar plan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Tab 2 -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- dueal-section con números en círculo y texto libre -->
+<section class="dueal-section pt_120 pb_120" style="background:#f9f9f9;">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!-- PROCESO -->
+      <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+        <div class="content_block_two">
+          <div class="content-box mr_100">
+            <div class="sec-title pb_35">
+              <span class="sub-title" style="color:#4CAF50; font-weight:600;">The Process</span>
+              <h2 style="font-size:32px; font-weight:700; margin-top:10px;">Preguntas & Respuestas:</h2>
+            </div>
+            <div class="inner-box">
+              <div class="single-item">
+                <span class="count-text">1</span>
+                <div class="text-content">
+                  <h3><a href="#">¿Qué diferencia a 4to Creativo de una agencia tradicional?</a></h3>
+                  <p>Combinamos creatividad con datos. Cada campaña se mide en tiempo real con dashboards claros y procesos de automatización que optimizan tu inversión.</p>
+                </div>
+              </div>
+              <div class="single-item">
+                <span class="count-text">2</span>
+                <div class="text-content">
+                  <h3><a href="#">¿Qué incluye una campaña digital con ustedes?</a></h3>
+                  <p>Estrategia en social media, segmentación de audiencias, pauta en Meta/Google, contenido creativo y reportes con KPIs accionables.</p>
+                </div>
+              </div>
+              <div class="single-item">
+                <span class="count-text">3</span>
+                <div class="text-content">
+                  <h3><a href="#">¿Puedo contratar solo un servicio?</a></h3>
+                  <p>Sí. Nuestros servicios son modulares: puedes iniciar con uno específico y luego escalar hacia un plan integral.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+        <div class="content_block_three">
+          <div class="content-box">
+            <div class="sec-title pb_30">
+              <span class="sub-title" style="color:#4CAF50; font-weight:600;">General Faqs</span>
+              <h2 style="font-size:32px; font-weight:700; margin-top:10px;">Preguntas & Respuestas:</h2>
+            </div>
+
+            <ul class="accordion-box">
+              <li class="accordion block active-block">
+                <div class="acc-btn active">
+                  <div class="icon-box"><i class="icon-21"></i></div>
+                  <h4>¿Cómo funcionan los reportes y dashboards?</h4>
+                  <div class="toggle-icon">+</div>
+                </div>
+                <div class="acc-content current">
+                  <div class="content">
+                    <p>Te damos acceso a paneles interactivos donde puedes ver leads, conversiones y retorno de inversión en tiempo real.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion block">
+                <div class="acc-btn">
+                  <div class="icon-box"><i class="icon-21"></i></div>
+                  <h4>¿Qué tan rápido veré resultados?</h4>
+                  <div class="toggle-icon">+</div>
+                </div>
+                <div class="acc-content">
+                  <div class="content">
+                    <p>Depende del servicio: en campañas pagadas notarás resultados desde el primer mes; en SEO y automatización, los beneficios crecen progresivamente.</p>
+                  </div>
+                </div>
+              </li>
+
+              <li class="accordion block">
+                <div class="acc-btn">
+                  <div class="icon-box"><i class="icon-21"></i></div>
+                  <h4>¿Tienen experiencia en mi industria?</h4>
+                  <div class="toggle-icon">+</div>
+                </div>
+                <div class="acc-content">
+                  <div class="content">
+                    <p>Sí. Hemos trabajado en real estate, retail, educación, manufactura y asociaciones profesionales, adaptando estrategias a cada sector.</p>
+                  </div>
+                </div>
+              </li>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS mejorado solo números en círculo -->
+<style>
+  /* Contador proceso: solo número con círculo */
+  .single-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .count-text {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #4CAF50;
+    background: #e8f5e9;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+  .text-content h3 a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .text-content p {
+    color: #555;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  /* FAQ */
+  .accordion-box .accordion {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .accordion-box .acc-btn {
+    background: #fff;
+    cursor: pointer;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .accordion-box .acc-btn:hover {
+    background: #f1f1f1;
+  }
+  .accordion-box .acc-btn h4 {
+    margin: 0;
+    font-size: 16px;
+  }
+  .accordion-box .acc-content {
+    display: none;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    color: #555;
+  }
+  .accordion-box .active-block .acc-content.current {
+    display: block;
+  }
+  .toggle-icon {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-left: 10px;
+  }
+</style>
+
+<!-- JS para acordeón -->
+<script>
+  document.querySelectorAll('.accordion-box .acc-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const parent = btn.parentElement;
+      const content = parent.querySelector('.acc-content');
+
+      if(parent.classList.contains('active-block')){
+        parent.classList.remove('active-block');
+        content.style.display = 'none';
+      } else {
+        document.querySelectorAll('.accordion-box .accordion').forEach(block => {
+          block.classList.remove('active-block');
+          block.querySelector('.acc-content').style.display = 'none';
+        });
+        parent.classList.add('active-block');
+        content.style.display = 'block';
+      }
+    });
+  });
+</script>
+
+<!-- CSS para rectángulos uniformes -->
+<style>
+  .pricing-block-one {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .pricing-block-one:hover {
+    transform: translateY(-5px);
+  }
+
+  .pricing-table .table-header h2 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #222;
+  }
+
+  .pricing-table .table-content {
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+
+  .pricing-table ul.list-item {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+  }
+
+  .pricing-table ul.list-item li {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #555;
+  }
+
+  .pricing-table .table-footer a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+
+  .pricing-table .table-footer a:hover {
+    background: #388E3C;
+  }
+
+  /* Tabs */
+  .tab { display: none; }
+  .tab.active-tab { display: block; }
+
+  .tab-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .tab-btn {
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .tab-btn.active-btn {
+    background: #4CAF50;
+    color: #fff;
+  }
+</style>
+
+<!-- JavaScript para cambiar de pestañas -->
+<script>
+  document.querySelectorAll(".tab-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const tabId = button.getAttribute("data-tab");
+
+      // Quitar clases activas
+      document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active-btn"));
+      document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active-tab"));
+
+      // Activar el tab seleccionado
+      button.classList.add("active-btn");
+      document.querySelector(tabId).classList.add("active-tab");
+    });
+  });
+</script>
+        <!-- download-section -->
+        <section class="download-section alternat-2 pb_120">
             <div class="auto-container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                        <div class="image_block_two">
-                            <div class="image-inner">
-                                <div class="image-box mr_15">
-                                    <figure class="image image-1 mb_15"><img src="assets/images/resource/about-3.jpg" alt=""></figure>
-                                    <figure class="image image-2"><img src="assets/images/resource/about-4.jpg" alt=""></figure>
-                                </div>
-                                <div class="image-box">
-                                    <figure class="image image-3 mb_15"><img src="assets/images/resource/about-5.jpg" alt=""></figure>
-                                    <figure class="image image-4"><img src="assets/images/resource/about-6.jpg" alt=""></figure>
-                                </div>
-                                <div class="support-box">
-                                    <div class="icon-box"><i class="icon-28"></i></div>
-                                    <span>Online Support</span>
-                                    <h4><a href="tel:912556889">+912 (556) 889</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                        <div class="content_block_five">
+                <div class="inner-container">
+                    <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-6.png);"></div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-8 col-md-12 col-sm-12 content-column">
                             <div class="content-box">
-                                <div class="sec-title pb_40 sec-title-animation animation-style2">
-                                    <span class="sub-title mb_10 title-animation">About us</span>
-                                    <h2 class="title-animation">The most loved <span>Agency</span></h2>
-                                    <p class="title-animation">Voted the fastest solution to implement the easiest to administer your employee & business.</p>
-                                </div>
-                                <div class="inner-box clearfix">
-                                    <div class="single-item">
-                                        <div class="icon-box"><i class="icon-29"></i></div>
-                                        <h4><a href="job-details.html">Easiest Admin</a></h4>
-                                        <span>Fall 2023</span>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-box"><i class="icon-30"></i></div>
-                                        <h4><a href="job-details.html">Users love Us</a></h4>
-                                        <span>Winter 2023</span>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-box"><i class="icon-31"></i></div>
-                                        <h4><a href="job-details.html">Leader</a></h4>
-                                        <span>Winter 2023</span>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="icon-box"><i class="icon-32"></i></div>
-                                        <h4><a href="job-details.html">Best support</a></h4>
-                                        <span>Winter 2023</span>
-                                    </div>
-                                </div>
+                                <h2>Descubre cómo escalar tu marketing con <span>creatividad + datos</span></h2>
+                                <ul class="list-item mb_30">
+                                    <li>Solicita una demo gratuita y conoce cómo nuestros dashboards, campañas omnicanal y automatización pueden transformar la forma en que tu marca crece.</li>
+                                    <li> 🚀 Estrategias medibles y escalables</li>
+                                    <li>🤖 Automatización con IA en WhatsApp y CRM</li>
+                                    <li>📊 Reportes claros en tiempo real</li>
+                                </ul>
+                                <button type="button" class="theme-btn btn-one">👉 Agenda una demo</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 image-column">
+                            <div class="image-box">
+                                <figure class="image"><img src="assets/images/resource/book-1.png" alt=""></figure>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- about-style-four end -->
+        <!-- download-section end -->
 
-
-        <!-- clients-section -->
-        <section class="clients-section home-3">
-            <div class="bg-color"></div>
-            <div class="auto-container">
-                <div class="inner-container">
-                    <div class="clients-box">
-                        <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-1.png" alt=""></a></figure>
-                        <figure class="overlay-logo"><a href="index.html"><img src="assets/images/clients/clients-1.png" alt=""></a></figure>
-                    </div>
-                    <div class="clients-box">
-                        <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-2.png" alt=""></a></figure>
-                        <figure class="overlay-logo"><a href="index.html"><img src="assets/images/clients/clients-2.png" alt=""></a></figure>
-                    </div>
-                    <div class="clients-box">
-                        <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
-                        <figure class="overlay-logo"><a href="index.html"><img src="assets/images/clients/clients-3.png" alt=""></a></figure>
-                    </div>
-                    <div class="clients-box">
-                        <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
-                        <figure class="overlay-logo"><a href="index.html"><img src="assets/images/clients/clients-4.png" alt=""></a></figure>
-                    </div>
-                    <div class="clients-box">
-                        <figure class="clients-logo"><a href="index.html"><img src="assets/images/clients/clients-5.png" alt=""></a></figure>
-                        <figure class="overlay-logo"><a href="index.html"><img src="assets/images/clients/clients-5.png" alt=""></a></figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- clients-section end -->
-
-
-        <!-- chooseus-section -->
-        <section class="chooseus-section alternat-3 pt_120 pb_90">
-            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-23.png);"></div>
-            <div class="auto-container">
-                <div class="sec-title light centred pb_60 sec-title-animation animation-style2">
-                    <span class="sub-title mb_10 title-animation">Why Us</span>
-                    <h2 class="title-animation">Why Choose Us</h2>
-                </div>
-                <div class="inner-container">
-                    <div class="row clearfix">
-                        <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                            <div class="chooseus-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-4"></i></div>
-                                    <h3><a href="index.html">Retain Top Talent</a></h3>
-                                    <p>Providing clear career paths and growth opportunities is key to retaining top talent.</p>
-                                    <div class="link"><a href="index.html">Learn More<i class="icon-7"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                            <div class="chooseus-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-5"></i></div>
-                                    <h3><a href="index.html">Stay Compliant</a></h3>
-                                    <p>Educate employees about compliance requirements through regular training</p>
-                                    <div class="link"><a href="index.html">Learn More<i class="icon-7"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
-                            <div class="chooseus-block-one">
-                                <div class="inner-box">
-                                    <div class="icon-box"><i class="icon-6"></i></div>
-                                    <h3><a href="index.html">Improve Employee</a></h3>
-                                    <p>Invest in employee training and development programs to enhance skills and knowledge.</p>
-                                    <div class="link"><a href="index.html">Learn More<i class="icon-7"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- chooseus-section end -->
-
-
+<!-- portfolio-section end -->
+ 
         <!-- industries-style-four -->
         <section class="industries-style-four pt_120 pb_90">
             <div class="auto-container">
@@ -534,74 +1189,7 @@
         <!-- industries-style-four end -->
 
 
-        <!-- team-section -->
-        <section class="team-section z_1 centred pt_0 pb_0">
-            <div class="auto-container">
-                <div class="sec-title pb_60 sec-title-animation animation-style2">
-                    <span class="sub-title mb_10 title-animation">Our Team</span>
-                    <h2 class="title-animation">Meet The Team</h2>
-                </div>
-                <div class="row clearfix">
-                    <div class="col-lg-3 col-md-6 col-sm-12 team-block">
-                        <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-1.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-1.jpg" alt=""></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="index.html">Tom Oliver</a></h3>
-                                    <span class="designation">Founder</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 team-block">
-                        <div class="team-block-one wow fadeInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-2.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-2.jpg" alt=""></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="index.html">Loenard Barnes</a></h3>
-                                    <span class="designation">Lead Engineer</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 team-block">
-                        <div class="team-block-one wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-3.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-3.jpg" alt=""></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="index.html">Gilbert Sherman</a></h3>
-                                    <span class="designation">Sale Manager</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 team-block">
-                        <div class="team-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-4.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-4.jpg" alt=""></figure>
-                                </div>
-                                <div class="lower-content">
-                                    <h3><a href="index.html">Franklin Bailey</a></h3>
-                                    <span class="designation">Art Director</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- team-section end -->
+       
 
 
         <!-- testimonial-style-two -->
