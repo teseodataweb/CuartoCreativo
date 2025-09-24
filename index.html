@@ -229,7 +229,7 @@
                                 <li><a href="about.html">Servicios</a></li>
                                 <li><a href="service.html">Nosotros</a></li>
                                 <li><a href="portfolio.html">Portafolio</a></li>
-                                <li><a href="blog.html">blog</a></li>
+                                <li><a href="blog.html">Blog</a></li>
                                 <li class="current"><a href="contact.html">Contacto</a></li> 
                             </ul>
                         </div>
@@ -240,7 +240,7 @@
                         <!--button class="search-toggler"><i class="icon-1"></i></button-->
                     </div>
                     <!--div class="link-box mr_20"><a href="login.html"></a></div-->
-                    <div class="btn-box"><a href="index.html" class="theme-btn btn-one">Contáctanos</a></div>
+                    <div class="btn-box"><a href="contact.html" class="theme-btn btn-one">Contáctanos</a></div>
                 </div>
             </div>
         </div>
@@ -309,7 +309,6 @@
   <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-2.png);"></div>
   <div class="auto-container">
     <div class="sec-title centred pb_60 sec-title-animation animation-style2">
-      <span class="sub-title mb_10 title-animation">Why Us</span>
       <h2 class="title-animation">¿Por qué elegirnos?</h2>
     </div>
     <div class="inner-container">
@@ -485,9 +484,12 @@
   </div>
 </section>
 
+<!-- Font Awesome (agregar en <head> si no lo tienes) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <!-- CSS -->
 <style>
-/* 🔑 Asegurar altura uniforme */
+/* 🔹 Sección de industrias (opcional si usas otras secciones) */
 .industries-section .inner-container {
   display: flex;
   flex-wrap: wrap;
@@ -496,14 +498,14 @@
 }
 
 .industries-block-one {
-  flex: 1 1 calc(25% - 20px); /* 4 por fila en desktop */
+  flex: 1 1 calc(25% - 20px); /* 4 por fila */
   display: flex;
-  min-width: 250px; /* que no se hagan demasiado pequeños */
+  min-width: 250px;
 }
 
 .industries-block-one .inner-box {
   flex: 1;
-  min-height: 280px; /* altura uniforme */
+  min-height: 280px;
   padding: 25px;
   background: #fff;
   border-radius: 12px;
@@ -515,26 +517,80 @@
   text-align: center;
 }
 
-/* Estilo de iconos */
 .industries-block-one .icon-box {
   font-size: 40px;
   color: #2196F3;
   margin-bottom: 15px;
 }
 
-/* hover */
 .industries-block-one .inner-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
+
+/* 🔹 Sección Choose Us */
+.chooseus-block-one .inner-box {
+  min-height: 280px; /* altura uniforme */
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.chooseus-block-one .icon-box {
+  font-size: 40px;
+  color: #2196F3;
+  margin-bottom: 15px;
+}
+
+.chooseus-block-one .inner-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.chooseus-block-one .inner-box p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.chooseus-block-one .inner-box p strong {
+  font-weight: 700;
+}
+
+/* 🔹 Ajustes para igualar altura de todos los bloques */
+.row.clearfix {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* Importante: iguala altura de todas las columnas */
+}
+
+.chooseus-block {
+  display: flex;
+  flex: 1 1 25%; /* 4 por fila en desktop */
+  padding: 10px; /* espacio interno entre columnas */
+}
+
+.chooseus-block-one {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.chooseus-block-one .inner-box {
+  flex: 1; /* ocupa toda la altura del bloque */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 </style>
 
-
-
-
-<!-- Font Awesome (agregar en <head> de tu HTML si no lo tienes) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+<!-- HTML -->
 <section class="chooseus-section light-section centred pl_100 pr_100">
   <div class="outer-container p_relative pt_120 pb_90">
     <div class="shape">
@@ -545,11 +601,10 @@
     </div>
     <div class="auto-container">
       <div class="sec-title light pb_60 sec-title-animation animation-style2">
-        <span class="sub-title mb_10 title-animation">Why Us</span>
         <h2 class="title-animation">Resultados que hablan por sí mismos</h2>
       </div>
 
-      <!-- Primera fila con 4 bloques -->
+      <!-- Primera fila -->
       <div class="row clearfix">
 
         <!-- Bloque 1 -->
@@ -558,7 +613,8 @@
             <div class="inner-box">
               <div class="icon-box"><i class="fas fa-building"></i></div>
               <h3><a href="index.html">Real Estate – WhatsApp Masivo</a></h3>
-              <p>Estrategia de captación para propiedades premium. +240 leads en 30 días</p>
+              <p>Estrategia de captación para propiedades premium. 
+                <strong>+240 leads en 30 días</strong></p>
             </div>
           </div>
         </div>
@@ -569,7 +625,8 @@
             <div class="inner-box">
               <div class="icon-box"><i class="fas fa-store"></i></div>
               <h3><a href="index.html">Retail – Campaña Social Media</a></h3>
-              <p>Lanzamiento de producto con pauta en Meta Ads. 35% más ventas online en 2 meses</p>
+              <p>Lanzamiento de producto con pauta en Meta Ads. 
+                <strong>35% más ventas online en 2 meses</strong></p>
             </div>
           </div>
         </div>
@@ -580,7 +637,8 @@
             <div class="inner-box">
               <div class="icon-box"><i class="fas fa-users"></i></div>
               <h3><a href="index.html">Remarketing Automatizado</a></h3>
-              <p>Flujos de WhatsApp para recuperar interesados inactivos y de reactivación de leads.</p>
+              <p>Flujos de WhatsApp para recuperar interesados inactivos y de 
+                <strong>reactivación de leads.</strong></p>
             </div>
           </div>
         </div>
@@ -591,7 +649,8 @@
             <div class="inner-box">
               <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
               <h3><a href="index.html">Educación – SEO & SEM</a></h3>
-              <p>Optimización de visibilidad en buscadores. Top 3 en Google en 4 keywords clave.</p>
+              <p>Optimización de visibilidad en buscadores. 
+                <strong>Top 3 en Google en 4 keywords clave.</strong></p>
             </div>
           </div>
         </div>
@@ -607,7 +666,7 @@
             <div class="inner-box">
               <div class="icon-box"><i class="fas fa-industry"></i></div>
               <h3><a href="index.html">Manufactura – Dashboard Data-Driven</a></h3>
-              <p>Integración de métricas comerciales y de producción.</p>
+              <p>Integración de <strong>métricas comerciales</strong> y de producción.</p>
             </div>
           </div>
         </div>
@@ -618,7 +677,8 @@
             <div class="inner-box">
               <div class="icon-box"><i class="fas fa-calendar-check"></i></div>
               <h3><a href="index.html">Eventos – Activación Omnicanal</a></h3>
-              <p>Estrategia digital para congreso nacional, +1,200 registros confirmados</p>
+              <p>Estrategia digital para congreso nacional, 
+                <strong>+1,200 registros confirmados</strong></p>
             </div>
           </div>
         </div>
@@ -628,35 +688,6 @@
   </div>
 </section>
 
-<!-- CSS -->
-<style>
-/* 🔑 Igualar altura de los bloques */
-.chooseus-block-one .inner-box {
-  min-height: 280px; /* altura uniforme */
-  padding: 25px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-/* Estilos de íconos */
-.chooseus-block-one .icon-box {
-  font-size: 40px;
-  color: #2196F3;
-  margin-bottom: 15px;
-}
-
-/* Hover */
-.chooseus-block-one .inner-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-</style>
 
 <!-- testimonial-style-two -->
 <section class="testimonial-style-two pt_70 pb_120">
@@ -756,7 +787,6 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="sec-title pb_20 sec-title-animation animation-style2">
-                        <span class="sub-title mb_10 title-animation">Join Our Team</span>
                         <h2 class="title-animation">¿Listo para escalar tus resultados?</h2>
                     </div>
                     <div class="text-box">
@@ -988,7 +1018,7 @@
                                 </div>
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
-                                        <li><a href="about.html">Estrategia Digital</a></li>
+                                       <li><a href="about.html">Estrategia Digital</a></li>
                                         <li><a href="about.html">Marketing Automatizado</a></li>
                                         <li><a href="about.html">Data-Driven Marketing</a></li>
                                         <li><a href="about.html">Desarrollo Web</a></li>
@@ -1004,12 +1034,13 @@
                                     <h4>Marcas (Diferenciadores)</h4>
                                 </div>
                                 <div class="widget-content">
-                                    <ul class="links-list clearfix">
-                                        <li><a href="service.html">Creatividad Estratégica</a></li>
-                                        <li><a href="service.html">Automatización Inteligente</a></li>
-                                        <li><a href="service.html">Data-driven Marketing</a></li>
-                                        <li><a href="service.html">Experiencia Multiindustria</a></li>
-                                    </ul>
+                                   <ul class="links-list clearfix">
+  <li><a href="#creatividad-estrategica">Creatividad Estratégica</a></li>
+  <li><a href="service.html#automatizacion-inteligente">Automatización Inteligente</a></li>
+  <li><a href="service.html#data-driven-marketing">Data-driven Marketing</a></li>
+  <li><a href="service.html#experiencia-multiindustria">Experiencia Multiindustria</a></li>
+</ul>
+
                                 </div>
                             </div>
                         </div>
