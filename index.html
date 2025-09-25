@@ -486,6 +486,70 @@
   line-height: 1.6;
   color: #333;
 }
+/* 🎨 Estilos para la sección chooseus */
+.chooseus-section .chooseus-block-one .inner-box {
+  min-height: 280px;
+  padding: 25px;
+  background: #fff; /* Fondo blanco */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+/* Círculo de ícono con degradado suave */
+.chooseus-section .chooseus-block-one .icon-box {
+  font-size: 40px;
+  color: #fff; /* Ícono blanco */
+  background: linear-gradient(135deg, rgba(6, 250, 136, 0.15), rgba(104, 10, 255, 0.15)); /* Verde → Morado muy suave */
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Hover de la tarjeta */
+.chooseus-section .chooseus-block-one .inner-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15); /* Elevación al hover */
+}
+
+/* Hover del círculo de ícono */
+.chooseus-section .chooseus-block-one .inner-box:hover .icon-box {
+  background: #00FB87; /* Verde sólido al hover (puedes cambiar a #7D31F5 si prefieres morado sólido) */
+}
+
+/* Titulares (h3) */
+.chooseus-section h3 a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* SemiBold / Bold */
+  font-size: 20px;
+  color: #000; /* Negro por defecto */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Texto de párrafo */
+.chooseus-section p {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Opcional: cambiar color del título al hover de la tarjeta */
+.chooseus-section .chooseus-block-one .inner-box:hover h3 a {
+  color: #7D31F5; /* Morado al pasar el mouse */
+}
+
 </style>
 
 <!-- Font Awesome (agregar en <head> de tu HTML si no lo tienes) -->
@@ -542,95 +606,135 @@
   </div>
 </section>
 
+<!-- CSS Integrado con altura uniforme -->
+<style>
+/* 🎨 Estilos para la sección industries */
+
+/* Contenedor de filas: usar flexbox para igualar alturas */
+.industries-section .inner-container.clearfix {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Bloques generales */
+.industries-section .industries-block-one {
+  flex: 1 1 calc(25% - 20px); /* 4 bloques por fila, ajustable */
+  display: flex; /* importante para igualar altura */
+  min-width: 250px;
+}
+
+.industries-section .industries-block-one .inner-box {
+  flex: 1; /* ocupa toda la altura del bloque */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff; /* Fondo blanco inicial */
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Círculo de ícono */
+.industries-section .industries-block-one .icon-box {
+  font-size: 40px;
+  color: #fff; /* ícono blanco inicial */
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 15px auto;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(0,251,135,0.15), rgba(125,49,245,0.15)); /* degradado verde→morado muy suave */
+}
+
+/* Titulares */
+.industries-section h3 a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Párrafos */
+.industries-section p {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Hover: todos los bloques */
+.industries-section .industries-block-one .inner-box:hover {
+  background: #7D31F5; /* Fondo sólido morado */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15); /* Shadow más marcado */
+}
+
+/* Hover: icono y textos dentro del bloque */
+.industries-section .industries-block-one .inner-box:hover .icon-box {
+  background: #00FB87; /* Verde sólido en hover */
+  color: #fff; /* ícono blanco sobre fondo verde */
+}
+
+/* Hover: títulos y párrafos */
+.industries-section .industries-block-one .inner-box:hover h3 a,
+.industries-section .industries-block-one .inner-box:hover p {
+  color: #fff; /* Texto blanco al hover */
+}
+
+/* Accentos secundarios (verde y rosa) */
+.industries-section .inner-box span,
+.industries-section .inner-box .accent {
+  color: #00FB87; /* verde como acento */
+}
+
+/* Botón CTA */
+.industries-section .btn-box .theme-btn.btn-one {
+  background-color: #7D31F5;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.industries-section .btn-box .theme-btn.btn-one:hover {
+  background-color: #00FB87; /* Verde en hover del botón */
+  color: #fff;
+}
+</style>
+
 <!-- Font Awesome (agregar en <head> si no lo tienes) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <!-- CSS -->
 <style>
-/* 🔹 Sección de industrias (opcional si usas otras secciones) */
-.industries-section .inner-container {
+/* 🎨 Fondo general morado degradado muy suave */
+.chooseus-section {
+  background: linear-gradient(135deg, rgba(125,49,245,0.05), rgba(0,251,135,0.05));
+  padding-top: 120px;
+  padding-bottom: 90px;
+}
+
+/* 🔹 Contenedor interno y filas */
+.chooseus-section .inner-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
 }
 
-.industries-block-one {
-  flex: 1 1 calc(25% - 20px); /* 4 por fila */
-  display: flex;
-  min-width: 250px;
-}
-
-.industries-block-one .inner-box {
-  flex: 1;
-  min-height: 280px;
-  padding: 25px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.industries-block-one .icon-box {
-  font-size: 40px;
-  color: #2196F3;
-  margin-bottom: 15px;
-}
-
-.industries-block-one .inner-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-/* 🔹 Sección Choose Us */
-.chooseus-block-one .inner-box {
-  min-height: 280px; /* altura uniforme */
-  padding: 25px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.chooseus-block-one .icon-box {
-  font-size: 40px;
-  color: #2196F3;
-  margin-bottom: 15px;
-}
-
-.chooseus-block-one .inner-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-.chooseus-block-one .inner-box p {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.chooseus-block-one .inner-box p strong {
-  font-weight: 700;
-}
-
-/* 🔹 Ajustes para igualar altura de todos los bloques */
-.row.clearfix {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch; /* Importante: iguala altura de todas las columnas */
-}
-
 .chooseus-block {
   display: flex;
-  flex: 1 1 25%; /* 4 por fila en desktop */
+  flex: 1 1 33%; /* 3 por fila en desktop */
   padding: 10px; /* espacio interno entre columnas */
 }
 
@@ -642,13 +746,74 @@
 
 .chooseus-block-one .inner-box {
   flex: 1; /* ocupa toda la altura del bloque */
+  min-height: 280px;
+  padding: 25px;
+  background: #fff; /* tarjetas blancas */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Iconos: círculo verde con ícono blanco */
+.chooseus-block-one .icon-box {
+  font-size: 40px;
+  color: #fff; /* ícono blanco */
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 15px auto;
+  background-color: #00FB87; /* verde sólido */
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Hover de tarjetas */
+.chooseus-block-one .inner-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* 🔹 Titulares: negro */
+.chooseus-block-one .inner-box h3 a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* 🔹 Textos: gris */
+.chooseus-block-one .inner-box p {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555; /* gris */
+  margin-top: 10px;
+}
+
+/* 🔹 Métricas destacadas en verde */
+.chooseus-block-one .inner-box p strong {
+  color: #00FB87;
+  font-weight: 700;
+}
+
+/* 🔹 Igualar altura de todos los bloques */
+.row.clearfix {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 </style>
 
-<!-- chooseus-section -->
+
+<!-- HTML -->
 <section class="chooseus-section light-section centred pl_100 pr_100">
   <div class="outer-container p_relative pt_120 pb_90">
     <div class="shape">
@@ -664,6 +829,7 @@
 
       <!-- Primera fila (3 bloques) -->
       <div class="row clearfix">
+
         <!-- Bloque 1 -->
         <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
           <div class="chooseus-block-one">
@@ -699,10 +865,12 @@
             </div>
           </div>
         </div>
-      </div> <!-- / Primera fila -->
+
+      </div>
 
       <!-- Segunda fila (3 bloques) -->
       <div class="row clearfix">
+
         <!-- Bloque 4 -->
         <div class="col-lg-4 col-md-6 col-sm-12 chooseus-block">
           <div class="chooseus-block-one">
@@ -737,12 +905,11 @@
             </div>
           </div>
         </div>
-      </div> <!-- / Segunda fila -->
 
+      </div>
     </div>
   </div>
 </section>
-
 
 <!-- testimonial-style-two -->
 <section class="testimonial-style-two pt_70 pb_120">

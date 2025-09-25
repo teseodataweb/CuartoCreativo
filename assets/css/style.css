@@ -71,15 +71,12 @@
 :root{
   --theme-color: #00FB87;
   --theme-color-2: #FF0AB4;
-  --secondary-color: #7D31F5;
+  --secondary-color: linear-gradient(135deg, #af87f0, #dad3e4,#f48cd5);
   --text-color: #111111;
   --title-color: #111111;
-  --text-font: "Inter", sans-serif;
-  --title-font: "Outfit", sans-serif;
+ --text-font: "Inter", "Roboto", sans-serif;   /* Para párrafos y cuerpo */
+ --title-font: "Poppins", sans-serif; 
 }
-
-
-
 
 
 body {

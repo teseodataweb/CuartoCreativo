@@ -238,6 +238,8 @@
 <!-- banner-section -->
 <section class="banner-section banner-style-two p_relative" style="padding: 60px 0; background-color: #FFFFFF;">
     <div class="outer-container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+      <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@600;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
         
         <!-- Columna izquierda: Texto -->
         <div class="content-box" style="flex: 1; min-width: 320px; color: #fff; padding: 20px;">
@@ -260,7 +262,7 @@
 
         <!-- Columna derecha: Imagen -->
         <div class="image-box" style="flex: 1; min-width: 320px; text-align: center;">
-            <img src="assets/images/banner/banner-1.jpg" alt="Team" style="max-width: 100%; border-radius: 10px;">
+            <img src="assets/images/banner/banner.jpg" alt="Team" style="max-width: 100%; border-radius: 10px;">
         </div>
     </div>
 </section>
@@ -290,7 +292,7 @@
     /* FILTROS */
     .my-portfolio .filters{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin:18px 0 24px; }
     .my-portfolio .filter-btn{
-      background:#f2f2f2; border-radius:25px; padding:9px 16px; border:0; cursor:pointer;
+      background:#7D31F5; border-radius:25px; padding:9px 16px; border:0; cursor:pointer;
       font-weight:600; color:#333; transition:all .15s ease;
     }
     .my-portfolio .filter-btn.active{ background:var(--accent); color:#fff; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
@@ -311,7 +313,7 @@
     .my-portfolio .portfolio-block{
       border-radius:var(--radius);
       overflow:hidden;
-      background:#efefef;
+      background:#7D31F5;
       display:flex;
       flex-direction:column;
       min-height:1px;
@@ -400,7 +402,7 @@
         <!-- Nota: el orden en el DOM = orden visual. Mantén aquí el orden que quieras mostrar. -->
         <div class="masonry-item all consulting">
           <article class="portfolio-block" tabindex="0">
-            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-16.jpg" alt="Consulting Excellence"></div>
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/Portafolio-16.jpg" alt="Consulting Excellence"></div>
             <div class="portfolio-body">
               <div class="overlay">
                 <div class="cat">IA & Automatización</div>
@@ -413,7 +415,7 @@
 
         <div class="masonry-item all market recruitment">
           <article class="portfolio-block" tabindex="0">
-            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-17.jpg" alt="Create blog posts"></div>
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/Portafolio-17.jpg" alt="Create blog posts"></div>
             <div class="portfolio-body">
               <div class="overlay">
                 <div class="cat">Marketing Digital & Activación</div>
@@ -426,7 +428,7 @@
 
         <div class="masonry-item all consulting presentation">
           <article class="portfolio-block" tabindex="0">
-            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-18.jpg" alt="Explore the concept"></div>
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/Portafolio-18.jpg" alt="Explore the concept"></div>
             <div class="portfolio-body">
               <div class="overlay">
                 <div class="cat">Data-Driven Marketing</div>
@@ -439,7 +441,7 @@
 
         <div class="masonry-item all recruitment market">
           <article class="portfolio-block" tabindex="0">
-            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-19.jpg" alt="Share stories"></div>
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/Portafolio-19.jpg" alt="Share stories"></div>
             <div class="portfolio-body">
               <div class="overlay">
                 <div class="cat">Masificación & Automatización</div>
@@ -452,7 +454,7 @@
 
         <div class="masonry-item all presentation">
           <article class="portfolio-block" tabindex="0">
-            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/portfolio-20.jpg" alt="Provide guidance"></div>
+            <div class="image-wrap"><img loading="lazy" src="assets/images/portfolio/Portafolio-20.jpg" alt="Provide guidance"></div>
             <div class="portfolio-body">
               <div class="overlay">
                 <div class="cat">Software & Dashboards</div>
@@ -533,35 +535,35 @@
   </script>
 </body>
 </html>
-<!-- pricing-section -->
+<!-- Font Awesome (agregar en <head> si no lo tienes) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- Pricing Section -->
 <section class="pricing-section pt_120 pb_90">
   <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-2.png);"></div>
   <div class="auto-container">
     <div class="sec-title centred pb_60 sec-title-animation animation-style2">
-     
       <h2 class="title-animation">Elige el plan que mejor se adapta a tu marca</h2>
     </div>
 
     <div class="tabs-box">
-      <!-- Botones -->
       <ul class="tab-btns tab-buttons">
-        <!--li class="tab-btn" data-tab="#tab-2">Yearly</li-->
+        <!-- Botones opcionales -->
       </ul>
 
       <div class="tabs-content">
         <!-- Tab 1: Monthly -->
         <div class="tab active-tab" id="tab-1">
           <div class="row clearfix">
+
+            <!-- Starter Plan -->
             <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
               <div class="pricing-block-one">
                 <div class="pricing-table">
                   <div class="table-header">
                     <h3>Starter plan</h3>
-                    <h2></h2>
-                    <!--span>Per Month</span-->
                   </div>
                   <div class="table-content mb_40">
-                    <!--p>For new comer to the industry trying out for an unlimited period.</p-->
                     <ul class="list-item">
                       <li><i class="icon-26"></i>Estrategia de Social Media</li>
                       <li><i class="icon-26"></i>Campañas pagadas (Meta/Google)</li>
@@ -574,22 +576,19 @@
                   </div>
                   <div class="table-footer">
                     <a href="contact.html"><span>Cotiza plan</span></a>
-
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Business Plan (Más Popular) -->
             <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
               <div class="pricing-block-one">
                 <div class="pricing-table">
                   <div class="table-header">
                     <h3>Business</h3>
-                    <h2></h2>
-                    <!--span>Per Month</span-->
                   </div>
                   <div class="table-content mb_40">
-                    <!--p>For new comer to the industry trying out for an unlimited period.</p-->
                     <ul class="list-item">
                       <li><i class="icon-26"></i>Estrategia de Social Media</li>
                       <li><i class="icon-26"></i>Campañas pagadas (Meta/Google)</li>
@@ -607,16 +606,14 @@
               </div>
             </div>
 
+            <!-- Advanced Plan -->
             <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
               <div class="pricing-block-one">
                 <div class="pricing-table">
                   <div class="table-header">
                     <h3>Advanced</h3>
-                    <h2></h2>
-                    <!--span>Per Month</span-->
                   </div>
                   <div class="table-content mb_40">
-                    <!--p>For new comer to the industry trying out for an unlimited period.</p-->
                     <ul class="list-item">
                       <li><i class="icon-26"></i>Estrategia de Social Media</li>
                       <li><i class="icon-26"></i>Campañas pagadas (Meta/Google)</li>
@@ -633,8 +630,154 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+
+          </div> <!-- row clearfix -->
+        </div> <!-- tab -->
+      </div> <!-- tabs-content -->
+    </div> <!-- tabs-box -->
+  </div>
+</section>
+
+<!-- CSS Integrado -->
+<style>
+/* Bloques de precios generales */
+.pricing-section .pricing-block-one .pricing-table {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+/* Títulos de los planes */
+.pricing-section .pricing-table .table-header h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Diferenciación de planes */
+.pricing-block:nth-child(1) .pricing-table {
+  background: #fff;
+}
+
+.pricing-block:nth-child(1) .pricing-table h3 {
+  color: #333; /* Título gris */
+}
+
+.pricing-block:nth-child(2) .pricing-table {
+  background: #EDE4FF; /* Plan recomendado */
+  position: relative;
+}
+
+.pricing-block:nth-child(2) .pricing-table h3 {
+  color: #7D31F5; /* Morado fuerte */
+}
+
+/* Etiqueta “Más popular” para Business */
+.pricing-block:nth-child(2) .pricing-table::before {
+  content: "Más popular";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FF0AB4;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.pricing-block:nth-child(3) .pricing-table {
+  background: #fff;
+}
+
+.pricing-block:nth-child(3) .pricing-table h3 {
+  color: #00FB87; /* Título verde */
+}
+
+/* Lista de características */
+.pricing-section .pricing-table .list-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.pricing-section .pricing-table .list-item li {
+  font-family: "Inter", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Checks y cruces */
+.pricing-section .pricing-table .list-item li i.icon-26 {
+  color: #00FB87; /* Check verde */
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.pricing-section .pricing-table .list-item li i.icon-27 {
+  color: #FF0AB4; /* Cruz rosa */
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Botones CTA */
+.pricing-section .pricing-table .table-footer a span {
+  display: inline-block;
+  background-color: #00C96B; /* Verde sólido */
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pricing-section .pricing-table .table-footer a span:hover {
+  background-color: #7D31F5; /* Morado en hover */
+  color: #fff;
+}
+
+/* Igualar altura de todos los bloques */
+.pricing-section .row.clearfix {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pricing-block {
+  display: flex;
+  flex: 1 1 33%;
+  padding: 10px;
+}
+
+.pricing-block-one {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pricing-block-one .pricing-table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+</style>
+
 
         <!-- Tab 2: Yearly -->
         <!--div class="tab" id="tab-2">
@@ -725,6 +868,7 @@
     <!-- TÍTULO ÚNICO CENTRADO -->
     <div class="sec-title pb_50" style="text-align:center;">
       <h2 style="font-size:32px; font-weight:700; color:#222;">Preguntas frecuentes</h2>
+      <p style="font-size:16px; color:#555; margin-top:10px;">Resolvemos las dudas más comunes antes de empezar a trabajar juntos.</p>
     </div>
 
     <div class="row clearfix">
@@ -811,188 +955,120 @@
   </div>
 </section>
 
-<!-- CSS mejorado solo números en círculo -->
+<!-- CSS Mejorado -->
 <style>
-  /* Contador proceso: solo número con círculo */
-  .single-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  .count-text {
-    display: inline-block;
-    font-size: 28px;
-    font-weight: 700;
-    color: #4CAF50;
-    background: #e8f5e9;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    margin-right: 20px;
-    flex-shrink: 0;
-  }
-  .text-content h3 a {
-    color: #222;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .text-content p {
-    color: #555;
-    font-size: 15px;
-    margin-top: 5px;
-  }
+/* Números circulares en proceso */
+.single-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.count-text {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #7D31F5; /* morado principal */
+  background: #EDE4FF; /* morado suave */
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
 
-  /* FAQ */
-  .accordion-box .accordion {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .accordion-box .acc-btn {
-    background: #fff;
-    cursor: pointer;
-    padding: 18px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 600;
-    transition: background 0.3s;
-  }
-  .accordion-box .acc-btn:hover {
-    background: #f1f1f1;
-  }
-  .accordion-box .acc-btn h4 {
-    margin: 0;
-    font-size: 16px;
-  }
-  .accordion-box .acc-content {
-    display: none;
-    padding: 15px 20px;
-    background: #f9f9f9;
-    color: #555;
-  }
-  .accordion-box .active-block .acc-content.current {
-    display: block;
-  }
-  .toggle-icon {
-    font-size: 20px;
-    color: #4CAF50;
-    margin-left: 10px;
-  }
+/* Texto contenido proceso */
+.text-content h3 a {
+  color: #222;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+.text-content p {
+  color: #555;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* FAQ */
+.accordion-box .accordion {
+  border-bottom: 1px solid #F2F2F2;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.accordion-box .acc-btn {
+  background: #fff;
+  cursor: pointer;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.accordion-box .acc-btn:hover {
+  background: #f9f9f9;
+}
+.accordion-box .acc-btn h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #222; /* texto cerrado */
+  transition: color 0.3s;
+}
+.accordion-box .active-block .acc-btn h4 {
+  color: #7D31F5; /* pregunta activa */
+}
+.accordion-box .toggle-icon {
+  font-size: 20px;
+  color: #00FB87; /* + / - activo */
+  transition: color 0.3s;
+}
+.accordion-box .acc-content {
+  display: none;
+  padding: 20px 24px;
+  background: #f9f9f9;
+  color: #555;
+}
+.accordion-box .active-block .acc-content {
+  display: block;
+}
+
+/* Íconos de acordeón */
+.accordion-box .icon-box i {
+  font-size: 18px;
+  color: #888;
+}
+
+/* Hover de íconos */
+.accordion-box .acc-btn:hover .icon-box i {
+  color: #FF0AB4; /* rosa hover */
+}
 </style>
-
 
 <!-- JS para acordeón -->
 <script>
-  document.querySelectorAll('.accordion-box .acc-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const parent = btn.parentElement;
-      const content = parent.querySelector('.acc-content');
+document.querySelectorAll('.accordion-box .acc-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const parent = btn.parentElement;
+    const content = parent.querySelector('.acc-content');
 
-      if(parent.classList.contains('active-block')){
-        parent.classList.remove('active-block');
-        content.style.display = 'none';
-      } else {
-        document.querySelectorAll('.accordion-box .accordion').forEach(block => {
-          block.classList.remove('active-block');
-          block.querySelector('.acc-content').style.display = 'none';
-        });
-        parent.classList.add('active-block');
-        content.style.display = 'block';
-      }
-    });
+    if(parent.classList.contains('active-block')){
+      parent.classList.remove('active-block');
+      content.style.display = 'none';
+    } else {
+      document.querySelectorAll('.accordion-box .accordion').forEach(block => {
+        block.classList.remove('active-block');
+        block.querySelector('.acc-content').style.display = 'none';
+      });
+      parent.classList.add('active-block');
+      content.style.display = 'block';
+    }
   });
+});
 </script>
 
-<!-- CSS para rectángulos uniformes -->
-<style>
-  .pricing-block-one {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-  }
-
-  .pricing-block-one:hover {
-    transform: translateY(-5px);
-  }
-
-  .pricing-table .table-header h2 {
-    font-size: 32px;
-    margin: 10px 0;
-    color: #222;
-  }
-
-  .pricing-table .table-content {
-    flex-grow: 1;
-    margin-bottom: 20px;
-  }
-
-  .pricing-table ul.list-item {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0;
-  }
-
-  .pricing-table ul.list-item li {
-    margin: 8px 0;
-    font-size: 15px;
-    color: #555;
-  }
-
-  .pricing-table .table-footer a {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background: #4CAF50;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s;
-  }
-
-  .pricing-table .table-footer a:hover {
-    background: #388E3C;
-  }
-
-  /* Tabs */
-  .tab { display: none; }
-  .tab.active-tab { display: block; }
-
-  .tab-btns {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-  }
-
-  .tab-btn {
-    cursor: pointer;
-    padding: 10px 25px;
-    border-radius: 8px;
-    background: #f0f0f0;
-    font-weight: 600;
-    transition: all 0.3s;
-  }
-
-  .tab-btn.active-btn {
-    background: #4CAF50;
-    color: #fff;
-  }
-</style>
 
 <!-- JavaScript para cambiar de pestañas -->
 <script>
@@ -1030,7 +1106,7 @@
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 image-column">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/resource/book-1.png" alt=""></figure>
+                                <figure class="image"><img src="assets/images/resource/book.png" alt=""></figure>
                             </div>
                         </div>
                     </div>

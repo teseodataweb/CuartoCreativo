@@ -249,133 +249,168 @@
   <div class="auto-container">
     <div class="row clearfix">
 
-      <!-- Contenido Izquierdo (verde) -->
-      <div class="col-lg-8 col-md-12 col-sm-12 content-side">
-        <div class="service-details-content">
+    <!-- Importar Google Fonts en el head -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
-          <!-- Encabezado -->
-          <div class="sec-title mb_40">
-            <h2>Impulsamos marcas con creatividad, datos y tecnología</h2>
-            <p></p>
-          </div>
+<style>
+  :root {
+    --theme-color: #00FB87;
+    --theme-color-2: #FF0AB4;
+    --secondary-color: #7D31F5;
+    --text-color: #111111;
+    --title-color: #111111;
 
-          <!-- Imagen principal -->
-          <figure class="image-box mb_30">
-            <img src="assets/images/service/service-7.jpg" alt="Executive Search">
-          </figure>
+    /* Tipografías */
+    --text-font: "Inter", "Roboto", sans-serif;
+    --title-font: "Poppins", sans-serif;
+  }
 
-          <!-- Texto -->
-          <div class="text-box">
-            <p class="mb_20">
-              En 4to Creativo ayudamos a empresas a crecer en digital con campañas
-              omnicanal, automatización inteligente y dashboards que convierten métricas en decisiones.
-            </p>
-            <p>
-              Nuestro propósito: hacer que cada acción de marketing genere resultados claros y escalables.
-            </p>
-          </div>
+  /* Titulares */
+  h1, h2, h3, h5, h6 {
+    font-family: var(--title-font);
+    font-weight: 600; /* SemiBold */
+    color: var(--title-color);
+  }
 
-        </div>
-      </div>
+  /* Subtítulos */
+  .sub-title,
+  .sec-title span,
+  h4,
+  .accordion-button {
+    font-family: var(--title-font);
+    font-weight: 500; /* Medium */
+    color: var(--title-color);
+  }
 
-      <!-- Columna Derecha (morada: menú + ebook) -->
-      <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
-        <div class="service-sidebar mr_40">
+  /* Cuerpo de texto */
+  body, p, span, li, a, .accordion-body {
+    font-family: var(--text-font);
+    font-weight: 400; /* Regular */
+    color: var(--text-color);
+  }
+</style>
 
-          <!-- Menú de categorías en acordeón -->
-          <div class="category-widget mb_40">
-            <div class="accordion" id="accordionCategorias">
+<!-- Contenido Izquierdo (verde) -->
+<div class="col-lg-8 col-md-12 col-sm-12 content-side">
+  <div class="service-details-content">
 
-              <!-- Item 1 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#catOne" aria-expanded="true" aria-controls="catOne">
-                    Creatividad estratégica
-                  </button>
-                </h2>
-                <div id="catOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                    <a href="service-details.html" class="active">
-                      Transformamos ideas en campañas que conectan con la audiencia y cumplen objetivos de negocio.
-                    </a>
-                  </div>
-                </div>
-              </div>
+    <!-- Encabezado -->
+    <div class="sec-title mb_40">
+      <h2>Impulsamos marcas con creatividad, datos y tecnología</h2>
+      <p></p>
+    </div>
 
-              <!-- Item 2 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#catTwo" aria-expanded="false" aria-controls="catTwo">
-                    Automatización inteligente
-                  </button>
-                </h2>
-                <div id="catTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                    <a href="service-details-2.html">
-                      Optimizamos procesos con herramientas de automatización que ahorran tiempo y recursos.
-                    </a>
-                  </div>
-                </div>
-              </div>
+    <!-- Imagen principal -->
+    <figure class="image-box mb_30">
+      <img src="assets/images/service/service-7.jpg" alt="Executive Search">
+    </figure>
 
-              <!-- Item 3 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#catThree" aria-expanded="false" aria-controls="catThree">
-                    Data-driven marketing
-                  </button>
-                </h2>
-                <div id="catThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                    <a href="service-details-3.html">
-                      Convertimos datos en estrategias claras que maximizan el retorno de inversión.
-                    </a>
-                  </div>
-                </div>
-              </div>
+    <!-- Texto -->
+    <div class="text-box">
+      <p class="mb_20">
+        En 4to Creativo ayudamos a empresas a crecer en digital con campañas
+        omnicanal, automatización inteligente y dashboards que convierten métricas en decisiones.
+      </p>
+      <p>
+        Nuestro propósito: hacer que cada acción de marketing genere resultados claros y escalables.
+      </p>
+    </div>
 
-              <!-- Item 4 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#catFour" aria-expanded="false" aria-controls="catFour">
-                    Experiencia multiindustria
-                  </button>
-                </h2>
-                <div id="catFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionCategorias">
-                  <div class="accordion-body">
-                    <a href="service-details-4.html">
-                      Contamos con casos de éxito en diferentes industrias y sectores.
-                    </a>
-                  </div>
-                </div>
-              </div>
+  </div>
+</div>
 
+<!-- Columna Derecha (morada: menú + ebook) -->
+<div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+  <div class="service-sidebar mr_40">
+
+    <!-- Menú de categorías en acordeón -->
+    <div class="category-widget mb_40">
+      <div class="accordion" id="accordionCategorias">
+
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#catOne" aria-expanded="true" aria-controls="catOne">
+              Creatividad estratégica
+            </button>
+          </h2>
+          <div id="catOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionCategorias">
+            <div class="accordion-body">
+              <a href="service-details.html" class="active">
+                Transformamos ideas en campañas que conectan con la audiencia y cumplen objetivos de negocio.
+              </a>
             </div>
           </div>
+        </div>
 
-          <!-- Bloque descarga E-book -->
-          <div class="download-widget">
-            <div class="inner-box">
-              <figure class="image-box">
-                <img src="assets/images/resource/book-3.png" alt="E-book">
-              </figure>
-              <h4></h4>
-             <a href="service.html" class="theme-btn btn-one">Conoce nuestro enfoque</a>
-              <h4></h4>
-              <button class="theme-btn btn-one" onclick="window.location.href='contact.html'">
-  Agenda una demo
-</button>
-
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#catTwo" aria-expanded="false" aria-controls="catTwo">
+              Automatización inteligente
+            </button>
+          </h2>
+          <div id="catTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionCategorias">
+            <div class="accordion-body">
+              <a href="service-details-2.html">
+                Optimizamos procesos con herramientas de automatización que ahorran tiempo y recursos.
+              </a>
             </div>
           </div>
-          </div>
-
         </div>
-      </div>
 
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#catThree" aria-expanded="false" aria-controls="catThree">
+              Data-driven marketing
+            </button>
+          </h2>
+          <div id="catThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionCategorias">
+            <div class="accordion-body">
+              <a href="service-details-3.html">
+                Convertimos datos en estrategias claras que maximizan el retorno de inversión.
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#catFour" aria-expanded="false" aria-controls="catFour">
+              Experiencia multiindustria
+            </button>
+          </h2>
+          <div id="catFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionCategorias">
+            <div class="accordion-body">
+              <a href="service-details-4.html">
+                Contamos con casos de éxito en diferentes industrias y sectores.
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bloque descarga E-book -->
+    <div class="download-widget">
+      <div class="inner-box">
+        <figure class="image-box">
+          <img src="assets/images/resource/book-3.png" alt="E-book">
+        </figure>
+        <h4></h4>
+        <a href="service.html" class="theme-btn btn-one">Conoce nuestro enfoque</a>
+        <h4></h4>
+        <button class="theme-btn btn-one" onclick="window.location.href='contact.html'">
+          Agenda una demo
+        </button>
+      </div>
     </div>
   </div>
-</section>
+</div>
+
 <!-- service-details end -->
 
 <!-- Bootstrap CSS -->
@@ -749,8 +784,8 @@
                         <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-1.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-1.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/team/team1.jpg" alt=""></figure>
+                                    <figure class="overlay-image"><img src="assets/images/team/team1.jpg" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="index.html">Managing Director</a></h3>
@@ -777,8 +812,8 @@
                         <div class="team-block-one wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-3.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-3.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/team/team3.jpg" alt=""></figure>
+                                    <figure class="overlay-image"><img src="assets/images/team/team3.jpg" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="index.html">Creative Directo</a></h3>
@@ -791,8 +826,8 @@
                         <div class="team-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-4.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-4.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/team/team4.jpg" alt=""></figure>
+                                    <figure class="overlay-image"><img src="assets/images/team/team4.jpg" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="index.html">Client Success Manage</a></h3>
@@ -805,8 +840,8 @@
                         <div class="team-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-5.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-5.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/team/team5.jpg" alt=""></figure>
+                                    <figure class="overlay-image"><img src="assets/images/team/team5.jpg" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="index.html">Content & Media Producerx</a></h3>
@@ -819,8 +854,8 @@
                         <div class="team-block-one wow fadeInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-6.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-6.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/team/team6.jpg" alt=""></figure>
+                                    <figure class="overlay-image"><img src="assets/images/team/team6.jpg" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="index.html">Web Developer </a></h3>
@@ -833,8 +868,8 @@
                         <div class="team-block-one wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-7.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-7.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/team/team7.jpg" alt=""></figure>
+                                    <figure class="overlay-image"><img src="assets/images/team/team7.jpg" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="index.html">Business Intelligence Specialist</a></h3>
@@ -847,8 +882,8 @@
                         <div class="team-block-one wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="assets/images/team/team-8.jpg" alt=""></figure>
-                                    <figure class="overlay-image"><img src="assets/images/team/team-8.jpg" alt=""></figure>
+                                    <figure class="image"><img src="assets/images/team/team8.jpg" alt=""></figure>
+                                    <figure class="overlay-image"><img src="assets/images/team/team8.jpg" alt=""></figure>
                                 </div>
                                 <div class="lower-content">
                                     <h3><a href="index.html">Strategy Analysts</a></h3>
@@ -1051,7 +1086,7 @@ tabs.forEach(tab => {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-<!-- chooseus-style-three -->
+<!-- chooseus-style-three mejorado con altura uniforme -->
 <section class="chooseus-style-three pt_120 pb_90">
     <div class="auto-container">
         <div class="row clearfix">
@@ -1059,76 +1094,144 @@ tabs.forEach(tab => {
             <div class="col-lg-3 col-md-12 col-sm-12 title-column">
                 <div class="sec-title pb_60 sec-title-animation animation-style2">
                     <span class="sub-title mb_10 title-animation">Aliados / Partners</span>
-                    <h2 class="title-animation">Alianzas que potencian nuestro impacto</h2>
-                    <h1></h1>
-                    <p> En Cuarto Creativo creemos en crecer en conjunto. Por eso colaboramos con aliados estratégicos que comparten nuestra visión de innovación, datos y creatividad para transformar industrias.</p>
+                    <h2 class="title-animation">Alianzas estratégicas que amplifican nuestro impacto</h2>
+                    <p>Colaboramos con empresas que comparten nuestra visión de innovación, creatividad y datos para transformar industrias.</p>
                 </div>
             </div>
 
             <!-- Contenido carrusel -->
             <div class="col-lg-9 col-md-12 col-sm-12 content-column">
                 <div class="chooseus-carousel owl-carousel owl-theme">
-                  
+
+                    <!-- Card Teseo Data Lab -->
                     <div class="chooseus-block">
                         <div class="inner-box">
-                            <div class="icon-box"><i class="icon-5"></i></div>
+                            <div class="icon-box"><i class="fas fa-chart-line"></i></div>
                             <h3><a href="#">Teseo Data Lab</a></h3>
-                            <p>"Con Teseo Data Lab potenciamos tus campañas digitales con analítica avanzada, IA y dashboards que impulsan resultados."</p>
-                        </div>
-                    </div>
-                    <div class="chooseus-block">
-                        <div class="inner-box">
-                            <div class="icon-box"><i class="icon-6"></i></div>
-                            <h3><a href="#">Alpine Hábitat </a></h3>
-                            <p>"creamos estrategias digitales que conectan clientes con propiedades de alto valor mediante branding y automatización."</p>
+                            <p>Campañas potenciadas con analítica avanzada, IA y dashboards de resultados.</p>
                         </div>
                     </div>
 
+                    <!-- Card Alpine Hábitat -->
+                    <div class="chooseus-block">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="fas fa-building"></i></div>
+                            <h3><a href="#">Alpine Hábitat</a></h3>
+                            <p>Estrategias digitales para conectar propiedades premium con clientes mediante branding y automatización.</p>
                         </div>
                     </div>
+
+                    <!-- Puedes agregar más bloques aquí -->
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<!-- CSS mejorado -->
 <style>
+/* ======================== Contenedor del carousel ======================== */
 .chooseus-carousel .chooseus-block {
-    background: #c9aef5;
+    display: flex;
+    height: 100%; /* Fuerza altura completa */
+    align-items: stretch;
+    margin: 10px;
+}
+
+.chooseus-carousel .inner-box {
+    background: #FFFFFF; /* Fondo blanco */
+    border: 1px solid #7D31F5; /* Borde morado */
     border-radius: 12px;
     padding: 25px 15px;
-    margin: 10px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.chooseus-carousel .chooseus-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+/* Forzar que todos los bloques tengan la misma altura */
+.chooseus-carousel .inner-box .content-wrapper {
+    flex-grow: 1;
 }
 
+/* Hover */
+.chooseus-carousel .chooseus-block:hover .inner-box {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ======================== Iconos ======================== */
 .chooseus-carousel .icon-box {
     font-size: 40px;
-    color: #FF0AB4;
+    color: #7D31F5;
     margin-bottom: 15px;
+    transition: color 0.3s;
 }
 
-.chooseus-carousel h3 { font-size: 18px; margin-bottom: 10px; }
-.chooseus-carousel p { font-size: 14px; color: #555; }
+.chooseus-carousel .chooseus-block:hover .icon-box {
+    color: #00FB87;
+}
 
+/* ======================== Títulos ======================== */
+.chooseus-carousel h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.chooseus-carousel h3 a {
+    color: #7D31F5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.chooseus-carousel .chooseus-block:hover h3 a {
+    color: #00FB87;
+}
+
+/* ======================== Párrafos ======================== */
+.chooseus-carousel p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex-grow: 1; /* Hace que el contenido del bloque crezca si hay menos texto */
+}
+
+/* ======================== Owl Carousel Nav ======================== */
 .owl-nav button {
     background: #00FB87;
     color: #fff;
     border-radius: 50%;
-    width: 35px; height: 35px;
-    position: absolute; top: 35%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 35%;
     border: none;
+    transition: background 0.3s;
 }
 
+.owl-nav button:hover { background: #7D31F5; }
 .owl-nav .owl-prev { left: -20px; }
 .owl-nav .owl-next { right: -20px; }
-.owl-nav button:hover { background: #ebb9ee; }
+
+/* ======================== Título de sección ======================== */
+.sec-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.sec-title p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
 </style>
 
 <!-- Scripts Owl Carousel -->
@@ -1136,7 +1239,8 @@ tabs.forEach(tab => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
 $(document).ready(function(){
-    $(".chooseus-carousel").owlCarousel({
+    var owl = $(".chooseus-carousel");
+    owl.owlCarousel({
         loop:true,
         margin:20,
         nav:true,
@@ -1148,12 +1252,26 @@ $(document).ready(function(){
             0:{ items:1 },
             600:{ items:2 },
             992:{ items:3 },
-            1200:{ items:4 } /* Más bloques visibles en pantallas grandes */
+            1200:{ items:4 }
         },
         navText:['<','>']
     });
+
+    // Ajuste de altura uniforme al cargar y redimensionar
+    function setUniformHeight(){
+        var maxHeight = 0;
+        $('.chooseus-carousel .inner-box').css('height','auto'); // reset
+        $('.chooseus-carousel .inner-box').each(function(){
+            if($(this).height() > maxHeight) maxHeight = $(this).height();
+        });
+        $('.chooseus-carousel .inner-box').height(maxHeight);
+    }
+
+    setUniformHeight();
+    $(window).resize(function(){ setUniformHeight(); });
 });
 </script>
+
 
  <!-- join-section -->
 <section class="join-section centred pt_120 pb_120">

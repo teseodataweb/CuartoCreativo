@@ -263,20 +263,16 @@
                     <div class="auto-container">
                         <div class="content-box">
                             <span class="upper-text">Top Agency</span>
-                            <h2>refuerza <span>confianza y</span>  beneficio</h2>
+                            <h2>Refuerza <span>confianza y</span>  beneficio</h2>
                             <p>“En 4to Creativo conectamos empresas visionarias con profesionales de alto nivel. Optimiza tu tiempo, reduce costos y contrata con confianza.”</p>
                             <div class="btn-box">
-                                <a href="index-4.html" class="theme-btn banner-btn mr_20">Contratar Talento Ahora</a>
-                                <a href="index-4.html" class="theme-btn banner-btn-two"><span>Descubre Oportunidades</span></a>
+                                <a href="contact.html" class="theme-btn banner-btn mr_20">Contratar Talento Ahora</a>
+                                <a href="about.html" class="theme-btn banner-btn-two"><span>Descubre Oportunidades</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slide-item p_relative">
-                    <div class="bg-layer" style="background-image: url(assets/images/banner/banner-6.jpg);"></div>
-                    <div class="shape-box">
-                        <div class="shape-1"></div>
-                        <div class="shape-2"></div>
+    
                         </div>
                     </div>
                 </div>
@@ -304,54 +300,70 @@
     <div class="auto-container">
         <div class="inner-container">
             <div class="row clearfix">
+                
+                <!-- Columna de información -->
                 <div class="col-lg-4 col-md-12 col-sm-12 info-column">
                     <div class="info-box">
                         <h3>Información de la Empresa</h3>
+
                         <div class="single-item">
                             <div class="icon-box"><img src="assets/images/icons/icon-27.png" alt=""></div>
                             <h4>Oficinas Corporativas</h4>
                             <p>42088, El Palmar, Pachuca de Soto, Hgo.</p>
                         </div>
-                       <div class="single-item">
-    <div class="icon-box"><i class="fas fa-clock"></i></div>
-    <h4>Atención a clientes</h4>
-    <p>Lunes a Viernes de 9:00 am a 6:00 pm (CDMX) y Sábado de 9:00 am a 2:00 pm</p>
-</div>
+
+                        <!-- Bloque del reloj -->
+                        <div class="single-item">
+                            <div class="icon-box">
+                                <i class="fas fa-clock reloj-icon"></i>
+                            </div>
+                            <h4>Atención a clientes</h4>
+                            <p>Lunes a Viernes de 9:00 am a 6:00 pm (CDMX) y Sábado de 9:00 am a 2:00 pm</p>
+                        </div>
+
                         <div class="single-item">
                             <div class="icon-box"><img src="assets/images/icons/icon-28.png" alt=""></div>
                             <h4>Gmail de la empresa</h4>
-                            <p><a href="mailto:support@example.com"> contacto@4tocreativo.mx</a><br /><a href="mailto:contact@example.com"></a></p>
+                            <p><a href="mailto:support@example.com"> contacto@4tocreativo.mx</a></p>
                         </div>
+
                         <div class="single-item">
                             <div class="icon-box"><img src="assets/images/icons/icon-29.png" alt=""></div>
-                            <h4>Numero de la epresa</h4>
-                            <p><a href="tel:2085440141">+52 1 771 364 9201</a><br /><a href="tel:2085440142"></a></p>
+                            <h4>Número de la empresa</h4>
+                            <p><a href="tel:2085440141">+52 1 771 364 9201</a></p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Columna de formulario -->
                 <div class="col-lg-8 col-md-12 col-sm-12 content-column">
                     <div class="form-inner">
                         <form method="post" action="https://azim.hostlin.com/Jobaway/sendemail.php" id="contact-form" enctype="multipart/form-data">
                             <div class="row clearfix">
+                                
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <label>Nombre <span>*</span></label>
-                                    <input type="text" name="username" placeholder="" required>
+                                    <input type="text" name="username" required>
                                 </div>
+
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     <label>Teléfono <span>*</span></label>
-                                    <input type="text" name="Teléfono" placeholder="" required>
+                                    <input type="text" name="telefono" required>
                                 </div>
+
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                     <label>Correo electrónico <span>*</span></label>
-                                    <input type="email" name="Correo electrónico" placeholder="" required>
+                                    <input type="email" name="correo" required>
                                 </div>
+
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                     <label>Asunto <span>*</span></label>
-                                    <input type="text" name="Asunto" placeholder="" required>
+                                    <input type="text" name="asunto" required>
                                 </div>
+
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                     <label>Mensaje<span>*</span></label>
-                                    <textarea name="Mensaje" placeholder=""></textarea>
+                                    <textarea name="mensaje"></textarea>
                                 </div>
 
                                 <!-- Adjuntar archivo -->
@@ -375,15 +387,27 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                     <button type="submit" class="theme-btn btn-one" name="submit-form">Enviar mensaje</button>
                                 </div>
+
                             </div>
                         </form>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </section>
 <!-- contact-section end -->
+
+<!-- CSS -->
+<style>
+/* Ajuste para que el ícono del reloj sea negro */
+.reloj-icon {
+    color: #000 !important;
+    font-size: 20px; /* puedes ajustar al tamaño de los otros íconos */
+}
+</style>
+
  <!-- page-title -->
 <section class="page-title centred pt_110 pb_60">
     <div class="auto-container">
