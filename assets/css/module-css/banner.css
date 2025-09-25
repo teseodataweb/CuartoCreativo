@@ -20,6 +20,16 @@
   position: relative;
   display: block;
 }
+.banner-section .content-box h2{
+ font-family: 'Popins-Bold.ttf'/* de letra */
+  font-weight:700; /* Bold */
+  font-size: 48px;  /* tamaño recomendado en desktop */
+  line-height: 56px; /* altura de línea para que respire */
+  color: #000000;
+  max-width: 930px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
 
 .banner-section .content-box h2{
   font-size: 72px;
@@ -40,7 +50,7 @@
 }
 
 .banner-section .content-box .btn-box{
-  position: relative;
+  position:'oppins-Medium.ttf';
   display: flex;
   align-items: center;
   justify-content: center;

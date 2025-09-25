@@ -2,7 +2,7 @@
 /** chooseus-section **/
 
 .chooseus-section{
-  position: relative;
+  position: Bold;
 }
 
 .chooseus-section .pattern-layer{
@@ -55,7 +55,7 @@
 }
 
 .chooseus-block-one .inner-box:hover .icon-box{
-  color: #fff;
+  color: #7D31F5 ;
 }
 
 .chooseus-block-one .inner-box .icon-box:before{

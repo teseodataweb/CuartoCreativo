@@ -69,10 +69,10 @@
 
 
 :root{
-  --theme-color: #78EB54;
-  --theme-color-2: #45A735;
-  --secondary-color: #26472B;
-  --text-color: #666666;
+  --theme-color: #00FB87;
+  --theme-color-2: #FF0AB4;
+  --secondary-color: #7D31F5;
+  --text-color: #111111;
   --title-color: #111111;
   --text-font: "Inter", sans-serif;
   --title-font: "Outfit", sans-serif;
@@ -225,7 +225,7 @@ h1,h2,h3,h4,h5,h6{
   position: fixed;
   z-index: 99999999;
   font-size: 12px;
-  background: #fff;
+  background: #7D31F5;
   color: var(--theme-color);
   width: 40px;
   height: 40px;
@@ -289,7 +289,7 @@ h1,h2,h3,h4,h5,h6{
 .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(9):before { animation-delay: 1.6s;}
 .handle-preloader .animation-preloader .txt-loading .letters-loading:nth-child(10):before { animation-delay: 1.8s;}
 .handle-preloader .loader-section {
-  background-color: #ffffff;
+  background-color: #ffff;
   height: 100%;
   position: fixed;
   top: 0;
@@ -407,7 +407,7 @@ html.lenis {
 
 .theme-btn:hover{
   background: var(--secondary-color);
-  color: #fff !important;
+  color: #FF0AB4  !important;
 }
 
 .theme-btn.btn-one{
@@ -504,7 +504,7 @@ html.lenis {
   height: 50px;
   width: 50px;
   line-height: 50px;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #FF0AB4;
   font-weight: 500;
   text-align: center;
   border-radius: 50%;
@@ -716,7 +716,7 @@ html.lenis {
   top:0px;
   width:100%;
   z-index:0;
-  background-color: #fff;
+  background-color: #FF0AB4;
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
   transition:all 500ms ease;
   -moz-transition:all 500ms ease;
@@ -777,7 +777,7 @@ html.lenis {
   left: 0;
   top: 100%;
   width: 110px;
-  background-color: #fff;
+  background-color: #7D31F5;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
   padding: 15px 15px;
   visibility: hidden;
@@ -1499,7 +1499,7 @@ button.ltr {
 }
 
 .dueal-section{
-  background: #EFF2E6;
+  background: #7D31F5;
 }
 
 .dueal-section .bg-color{
