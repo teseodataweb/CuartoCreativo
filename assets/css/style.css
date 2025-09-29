@@ -71,7 +71,7 @@
 :root{
   --theme-color: #00FB87;
   --theme-color-2: #FF0AB4;
-  --secondary-color: linear-gradient(135deg, #af87f0, #dad3e4,#f48cd5);
+  --secondary-color: linear-gradient(135deg, #af87f0, #dad3e4,#FF0AB4);
   --text-color: #111111;
   --title-color: #111111;
  --text-font: "Inter", "Roboto", sans-serif;   /* Para párrafos y cuerpo */

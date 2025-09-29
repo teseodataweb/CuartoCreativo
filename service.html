@@ -253,41 +253,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --theme-color: #00FB87;
-    --theme-color-2: #FF0AB4;
-    --secondary-color: #7D31F5;
-    --text-color: #111111;
-    --title-color: #111111;
+:root{
+  --theme-color: #00FB87;
+  --theme-color-2: #FF0AB4;
+  --secondary-color: linear-gradient(135deg, #af87f0, #dad3e4,#FF0AB4);
+  --text-color: #111111;
+  --title-color: #111111;
+ --text-font: "Inter", "Roboto", sans-serif;   /* Para párrafos y cuerpo */
+ --title-font: "Poppins", sans-serif; 
+}
 
-    /* Tipografías */
-    --text-font: "Inter", "Roboto", sans-serif;
-    --title-font: "Poppins", sans-serif;
-  }
-
-  /* Titulares */
-  h1, h2, h3, h5, h6 {
-    font-family: var(--title-font);
-    font-weight: 600; /* SemiBold */
-    color: var(--title-color);
-  }
-
-  /* Subtítulos */
-  .sub-title,
-  .sec-title span,
-  h4,
-  .accordion-button {
-    font-family: var(--title-font);
-    font-weight: 500; /* Medium */
-    color: var(--title-color);
-  }
-
-  /* Cuerpo de texto */
-  body, p, span, li, a, .accordion-body {
-    font-family: var(--text-font);
-    font-weight: 400; /* Regular */
-    color: var(--text-color);
-  }
 </style>
 
 <!-- Contenido Izquierdo (verde) -->
@@ -429,21 +404,23 @@
     border: none;
   }
 
-  .accordion-button:not(.collapsed) {
-    color: #28a745; /* Verde cuando está abierto */
-    background-color: #f9f9f9;
-  }
+.accordion-button:not(.collapsed) {
+  color: #00FB87; /* Verde cuando está abierto */
+  background-color: #f9f9f9;
+}
+
+
 
   .accordion-button::after {
     content: '+';
     font-weight: bold;
-    color: #28a745;
+    color:#00FB87;
     transform: rotate(0deg);
   }
 
   .accordion-button:not(.collapsed)::after {
     content: '−';
-    color: #28a745;
+    color: #00FB87;
   }
 
   .accordion-body {
@@ -459,7 +436,7 @@
   }
 
   .accordion-body a:hover {
-    color: #28a745;           /* verde al pasar el mouse */
+    color: #00FB87;           /* verde al pasar el mouse */
     text-decoration: none;
   }
 </style>
@@ -489,13 +466,13 @@
   .accordion-button::after {
     content: '+';
     font-weight: bold;
-    color: #28a745;
+    color: #00FB87;
     transform: rotate(0deg);
   }
 
   .accordion-button:not(.collapsed)::after {
     content: '−';
-    color: #28a745;
+    color: #00FB87;
   }
 
   .accordion-body {
@@ -897,10 +874,6 @@
         </section>
         <!-- team-section end -->
                     
-
-
-
-
 
     <section class="values-section py-5">
   <div class="text-center mb-5">

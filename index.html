@@ -281,11 +281,42 @@
         </div>
         <!-- End Mobile Menu -->
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<!-- banner-section -->
+<section class="banner-section p_relative centred" style="position: relative; overflow: hidden; padding: 100px 0; background: #fdfdfd;">
+  <div class="pattern-layer" style="background-image: url(assets/images/shape/degradadoclaro.png);"></div>
 
-<style>
-/* Banner Section - Tipografía y color */
+  <style>
+    .circle-wrapper {
+      position: absolute;
+      text-align: center;
+    }
+    .circle-wrapper img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    .circle-label {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
+      color: #fff;
+    }
+
+    /* Posiciones creativas alrededor del centro */
+    .circle1 { top: 10%; left: 15%; }
+    .circle2 { top: 15%; right: 18%; }
+    .circle3 { bottom: 20%; left: 20%; }
+    .circle4 { bottom: 25%; right: 22%; }
+    .circle5 { top: 45%; left: 5%; }
+    .circle6 { top: 50%; right: 5%; }
+
+    /* Banner Section - Tipografía y color */
 .banner-section .content-box h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700; /* Bold */
@@ -303,101 +334,47 @@
   margin-bottom: 30px;
 }
 
-/* Responsivo: reducir título en móviles */
-@media (max-width: 768px) {
-  .banner-section .content-box h2 {
-    font-size: 36px;
-  }
-}
+  </style>
 
-/* Estilos de botones */
-.banner-section .theme-btn {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  color: #000000; /* Texto negro */
-  background-color: #00FB87; /* Verde sólido */
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+  <!-- Imágenes flotantes -->
+  <div class="circle-wrapper circle1">
+    <img src="assets/images/resource/author-1.jpg" alt="Imagen 1">
+  </div>
 
-.banner-section .theme-btn:hover {
-  background-color: #6f42c1; /* Morado en hover */
-  color: #ffffff; /* Texto blanco en hover */
-}
-</style>
+  <div class="circle-wrapper circle2">
+    <img src="assets/images/resource/author-2.jpg" alt="Imagen 2">
+  </div>
 
-<!-- banner-section -->
-<section class="banner-section p_relative centred">
-    <div class="pattern-layer" style="background-image: url(assets/images/shape/degradadoclaro.png);"></div>
-    <div class="author-box">
-        <style>
-.author img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-.author {
-  text-align: center;
-  display: inline-block;
-  margin: 20px;
-}
-.author span {
-  display: block;
-  margin-top: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  color: #333;
-}
-</style>
+  <div class="circle-wrapper circle3">
+    <img src="assets/images/resource/author-3.jpg" alt="Imagen 3">
+  </div>
 
-<div class="author author-1">
-  <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" alt="Marketing">
-  <span>Marketing</span>
-</div>
+  <div class="circle-wrapper circle4">
+    <img src="assets/images/resource/author-4.jpg" alt="Imagen 4">
+  </div>
 
-<div class="author author-2">
-  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Publicidad">
-  <span>Publicidad</span>
-</div>
+  <div class="circle-wrapper circle5">
+    <img src="assets/images/resource/author-5.jpg" alt="Imagen 5">
+  </div>
 
-<div class="author author-3">
-  <img src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe" alt="Diseño Web">
-  <span>Diseño Web</span>
-</div>
+  <div class="circle-wrapper circle6">
+    <img src="assets/images/resource/author-6.jpg" alt="Imagen 6">
+  </div>
 
-<div class="author author-4">
-  <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67" alt="Desarrollo Web">
-  <span>Desarrollo Web</span>
-</div>
-
-<div class="author author-5">
-  <img src="https://images.unsplash.com/photo-1603570419879-295b6a9f6b6f" alt="Redes Sociales">
-  <span>Redes Sociales</span>
-</div>
-
-<div class="author author-6">
-  <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Estrategia Digital">
-  <span>Estrategia Digital</span>
-</div>
-
+  <!-- Texto central -->
+  <div class="auto-container" style="position: relative; z-index: 2; text-align: center; max-width: 800px; margin: 0 auto;">
+    <div class="content-box">
+      <h2>Agencia de Marketing Digital que combina Creatividad + Datos</h2>
+      <p>En 4to Creativo diseñamos campañas digitales que no solo inspiran, también escalan tus resultados. Desde social media hasta automatización con IA, llevamos tu marca al siguiente nivel con estrategias medibles y efectivas.</p>
+      <div class="btn-box">
+        <a href="contact.html" class="theme-btn btn-one mr_20"><span>Cotiza campaña</span></a>
+        <a href="portfolio.html" class="theme-btn banner-btn">Ver casos</a>
+      </div>
     </div>
-    <div class="auto-container">
-        <div class="content-box">
-            <h2>Agencia de Marketing Digital que combina Creatividad + Datos</h2>
-            <p>En 4to Creativo diseñamos campañas digitales que no solo inspiran, también escalan tus resultados. Desde social media hasta automatización con IA, llevamos tu marca al siguiente nivel con estrategias medibles y efectivas.</p>
-            <div class="btn-box">
-                <a href="contact.html" class="theme-btn btn-one mr_20"><span>Cotiza campaña</span></a>
-                <a href="portfolio.html" class="theme-btn banner-btn">Ver casos</a>
-            </div>
-        </div>
-    </div>
+  </div>
+
 </section>
+
 
 <!-- chooseus-section -->
 <section class="chooseus-section pt_200 pb_90">
@@ -974,7 +951,7 @@
                     <div class="inner-box">
                         <div class="icon-box"><img src="assets/images/icons/icon-11.png" alt=""></div>
                         <div class="author-box">
-                            <figure class="thumb-box"><img src="assets/images/resource/testimonial-1.png" alt=""></figure>
+                            <figure class="thumb-box"><img src="assets/images/resource/testimonial-3.png" alt=""></figure>
                             <h4>Mariana López</h4>
                             <span class="designation"><strong>Directora de Marketing en Real Estate</strong></span>
                         </div>
@@ -989,7 +966,7 @@
                     <div class="inner-box">
                         <div class="icon-box"><img src="assets/images/icons/icon-11.png" alt=""></div>
                         <div class="author-box">
-                            <figure class="thumb-box"><img src="assets/images/resource/testimonial-3.png" alt=""></figure>
+                            <figure class="thumb-box"><img src= "assets/images/resource/testimonial-2.png" alt=""></figure>
                             <h4>Jorge Ramírez</h4>
                             <span class="designation"><strong>Gerente de Retail</strong></span>
                         </div>
